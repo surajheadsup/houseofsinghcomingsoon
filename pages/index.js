@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../public/static/animation.json";
@@ -18,7 +19,7 @@ function Index() {
         <Lottie options={defaultOptions} height={400} width={500} />
         <h1  className="h1-1">We are currently working on our new website.</h1>
         <h1  className="h1-2">We&apos;ll be launching soon, subscribe to be notified.</h1>
-        <h1 className="query">For any queries, please email at hello@houseofsingh.com</h1>
+        <h1 className="query">For any queries, please email at <Link href="mailto:hello@houseofsingh.com"><a>hello@houseofsingh.com</a></Link></h1>
       </div>
     </>
   )
