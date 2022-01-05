@@ -30,6 +30,7 @@ function Index() {
           console.log('response', response.data);
           if (response.data.status === 200) {
             toast.success('Subscribed Successfully');
+            setEmail('')
           }else if(response.data.errors.email){
             toast.error(response.data.errors.email[0])
           }
@@ -70,7 +71,7 @@ function Index() {
         <h1  className="h1-2">We&apos;ll be launching soon, subscribe to be notified.</h1>
         <div>
           <div className="input-group mb-3">
-            <input type="email" className="form-control custom-input" name="email" onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="email" value={email} className="form-control custom-input" name="email" onChange={(e)=>setEmail(e.target.value)}/>
             <div className="input-group-append hover">
               <span className="input-group-text" onClick={()=>handleSubmit()}><ion-icon name="arrow-forward-outline"></ion-icon></span>
             </div>
